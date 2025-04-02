@@ -1,0 +1,45 @@
+@use '../../styles/variables' as vars;
+
+.loginFormContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: vars.$bgLogin;
+
+  display: grid;
+  place-items: center;
+
+  .loginForm {
+    width: 350px;
+    margin: "auto"; 
+    margin-top: 50; 
+    
+    .loginFormItem {
+      font-size: 28px;
+      margin-bottom: 50px;
+      
+    }
+  }
+
+  .cardTitle {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .loginButton {
+    border-radius: 0;
+    background-image: vars.$bgLogin;
+    padding: 20px 15px;
+    font-size: 18px;
+
+    &:hover {
+      transform: scale(0.96);
+      background: vars.$bgLogin!important;
+    }
+  }
+}
+
+
+  
