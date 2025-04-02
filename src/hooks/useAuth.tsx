@@ -8,6 +8,8 @@ import { clearUser, setUser } from '../store/userSlice'
 import { clearUsers } from '../store/usersSlice'
 import { localStorageUtil } from '../utils/localStorage'
 
+type NotificationType = 'success' | 'info' | 'warning' | 'error';
+
 const useAuth = () => {
   const { get, set, remove } = localStorageUtil()
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -41,7 +43,7 @@ const useAuth = () => {
       dispatch(setUser(response.data))
       navigate("/dashboard");
       return response.data;
-    } catch (err) {
+    } catch (err: any) {
       setError(err.response.data.message);
       openNotificationWithIcon('error', err.response.data.message)
     } finally {

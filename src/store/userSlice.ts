@@ -14,6 +14,7 @@ interface UserInfo {
   address: string;
   phone: string;
   email: string;
+  image?: string;
 }
 
 interface UserState {
@@ -45,7 +46,7 @@ const userSlice = createSlice({
       state.username = action.payload.username
     },
     setAllInfo: (state, action: PayloadAction<UserInfo>) => {
-      state.image = action.payload.image
+      state.image = action.payload.image || '';
       state.firstName = action.payload.firstName;
       state.lastName = action.payload.lastName;
       state.email = action.payload.email;

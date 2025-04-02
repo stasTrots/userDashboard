@@ -1,5 +1,5 @@
 export const columns = [
-  { title: "Ім'я", dataIndex: "firstName", key: "firstName" },
-  { title: "Прізвище", dataIndex: "lastName", key: "lastName" },
-  { title: "Вік", dataIndex: "age", key: "age" },
+  { title: "First Name", dataIndex: "firstName", key: "firstName" },
+  { title: "Last Name", dataIndex: "lastName", key: "lastName" },
+  { title: "Age", dataIndex: "age", key: "age" },
 ];

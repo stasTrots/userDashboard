@@ -1,8 +1,8 @@
-import { RootState } from '@reduxjs/toolkit/query'
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux'
 import { USERS_API } from '../api/Api'
+import { RootState } from '../store/store'
 import { setUsers } from '../store/usersSlice'
 
 const useFetchUsers = () => {

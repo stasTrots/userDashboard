@@ -6,7 +6,7 @@ import LayoutWrapper from '../../layouts/Layout'
 import { RootState } from '../../store/store'
 
 const UserPage: React.FC = () => {
-  const { loading, error } = useGetAllInfoUser();
+  const { loading } = useGetAllInfoUser();
   const user = useSelector((state: RootState) => state.user.allInfo)
   const navigate = useNavigate();
 

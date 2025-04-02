@@ -23,7 +23,7 @@ const useGetAllInfoUser = () => {
       try {
         const response = await axios.get(GET_USER_API, {
           headers: {
-            'Authorization': `Bearer ${JSON.parse(accessToken)}`
+            'Authorization': `Bearer ${JSON.parse(accessToken || '')}`
           }
         });
         dispatch(setAllInfo(response.data))

@@ -1,4 +1,3 @@
-import { RootState } from '@reduxjs/toolkit/query'
 import { Button, Layout, Menu, MenuProps } from 'antd'
 import Avatar from 'antd/es/avatar/Avatar'
 import { Content, Header } from 'antd/es/layout/layout'
@@ -7,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import { NavRoutes } from '../routes/Routes'
+import { RootState } from '../store/store'
 
 const LayoutWrapper = ({children}: {children: React.ReactNode}) => {
   const user = useSelector((state: RootState) => state.user)
