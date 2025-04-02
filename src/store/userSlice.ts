@@ -62,7 +62,7 @@ const userSlice = createSlice({
         height: action.payload.height,
         weight: action.payload.weight,
         university: action.payload.university,
-        address: `${action.payload.address.country}, ${action.payload.address.city}, ${action.payload.address.address}`,
+        address: action.payload.address,
         phone: action.payload.phone,
         email: action.payload.email
       }

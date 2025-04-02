@@ -3,7 +3,7 @@ import useAuth from '../../hooks/useAuth.js'
 import styles from './LoginForm.module.scss'
 
 const LoginForm: React.FC = () => {
-  const { login, loading, error, contextHolder } = useAuth()
+  const { login, loading, contextHolder } = useAuth()
   
   const onFinish = (values: any) => {
     login(values.username, values.password);

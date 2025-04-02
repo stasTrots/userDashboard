@@ -26,7 +26,7 @@ const useGetAllInfoUser = () => {
             'Authorization': `Bearer ${JSON.parse(accessToken || '')}`
           }
         });
-        dispatch(setAllInfo(response.data))
+        dispatch(setAllInfo({...response.data, address: `${response.data.country}, ${response.data.address.city}, ${response.data.address.address}`}))
       } catch (err) {
         console.log(err)
         setError("Не вдалося отримати список користувачів");
